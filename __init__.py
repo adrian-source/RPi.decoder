@@ -3,8 +3,8 @@
 
 class DECODER:
 
-	_OUT_DECODER_PINS = [1, 2, 3, 4, 5, 6, 7, 8]
-	_IN_DECODER_PINS = []
+	_PINS_OUT = 0
+	_PINS_IN = 0
 
 	''' function: setup
 	    description: setups necessary variables for the 
@@ -12,10 +12,9 @@ class DECODER:
 	    
 	    inputs: RPi pin1, RPi pin2, RPi pin3 
 	'''
-	def setup(pin1, pin2, pin3):
-		_IN_DECODER_PINS[1] = pin1
-		_IN_DECODER_PINS[2] = pin2
-		_IN_DECODER_PINS[3] = pin3
+	def setup(pins_in, num_out):
+		_PINS_IN = pins_in
+		_PINS_OUT = range(1, num_out+1)
 		
 
 	def on(decoder):
