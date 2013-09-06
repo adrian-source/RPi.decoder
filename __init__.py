@@ -31,7 +31,7 @@ def setup(in_pins, input_dict):
 	#configure in pins as outputs
 	for pin in _IN_PINS:
 		GPIO.setup(pin, GPIO.OUT)
-		GPIO.output(pin, GPIO.HIGH)
+		GPIO.output(pin, 1)
 		
 	#turn all relays off
 	allOff()
