@@ -34,7 +34,7 @@ def setup(in_pins, input_dict):
 		GPIO.output(pin, 1)
 		
 	#turn all relays off
-	allOff()
+	all_off()
 
 ''' function: all_off
     description: use the 'off' configuration to turn
