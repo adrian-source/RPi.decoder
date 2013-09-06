@@ -9,8 +9,8 @@ class InvalidDecoderSetupParametersException(Exception):
 	"""Number of in_pins doesn't match size of input_dict"""
 	pass
         
-        _IN_PINS = 0
-        _INPUT_DICT = 0
+_IN_PINS = 0
+_INPUT_DICT = 0
                 
 ''' function: setup
     description: setups necessary variables for the
