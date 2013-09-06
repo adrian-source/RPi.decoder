@@ -52,10 +52,11 @@ def all_off():
 '''
 def on(relay):
 	#validate input
-	if (relay > len(self._INPUT_DICT) - 1):
+	relay = int(relay)
+	if not (relay < len(_INPUT_DICT) or relay > 0):
 		raise InvalidRelayNumberException
 		
 	all_off()
 	for pin in range(0, 3):
-		GPIO.output(_IN_PINS[pin], _INPUT_DICT[relay][pin])
+		GPIO.output(_IN_PINS[pin], _INPUT_DICT[relay-1][pin])
 
