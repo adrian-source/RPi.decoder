@@ -25,8 +25,8 @@ def setup(in_pins, input_dict):
  		if len(in_pins) != len(input_dict[relay]):
  			raise InvalidDecoderSetupException
  	
-	self._IN_PINS = in_pins
-        self._INPUT_DICT = input_dict
+	_IN_PINS = in_pins
+        _INPUT_DICT = input_dict
 		
 	#configure in pins as outputs
 	for pin in _IN_PINS:
@@ -42,7 +42,7 @@ def setup(in_pins, input_dict):
 '''
 def all_off():
 	for pin in range(0, 3):
-		GPIO.output(self._IN_PINS[pin], self._INPUT_DICT[len(self._INPUT_DICT)][pin])
+		GPIO.output(_IN_PINS[pin], _INPUT_DICT[len(_INPUT_DICT)][pin])
 		
 ''' function: on
     description: turns off all relays and then turns 
@@ -55,5 +55,5 @@ def on(relay):
 		
 	all_off()
 	for pin in range(0, 3):
-		GPIO.output(self._IN_PINS[pin], self._INPUT_DICT[relay][pin])
+		GPIO.output(_IN_PINS[pin], _INPUT_DICT[relay][pin])
 
