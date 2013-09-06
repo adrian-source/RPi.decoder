@@ -51,7 +51,7 @@ def all_off():
 def on(relay):
 	#validate input
 	if (relay > len(_INPUT_DICT) - 1):
-		throw InvalidRelayNumberException
+		raise InvalidRelayNumberException
 		
 	all_off()
 	for pin in range(0, 3):
