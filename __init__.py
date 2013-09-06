@@ -12,11 +12,11 @@ class InvalidDecoderSetupParametersException(Exception):
         _IN_PINS = 0
         _INPUT_DICT = 0
                 
- ''' function: setup
-     description: setups necessary variables for the
-     DECODER GPIO driver.
- '''
- def setup(in_pins, input_dict):
+''' function: setup
+    description: setups necessary variables for the
+    DECODER GPIO driver.
+'''
+def setup(in_pins, input_dict):
  	
  	#validate input
  	if len(in_pins) == 0:
