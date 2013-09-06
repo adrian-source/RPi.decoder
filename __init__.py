@@ -43,7 +43,7 @@ def setup(in_pins, input_dict):
     all relays off
 '''
 def all_off():
-	for pin in range(0, 3):
+	for pin in range(0, len(_IN_PINS)):
 		GPIO.output(_IN_PINS[pin], _INPUT_DICT[len(_INPUT_DICT)-1][pin])
 		
 ''' function: on
@@ -57,6 +57,6 @@ def on(relay):
 		raise InvalidRelayNumberException
 		
 	all_off()
-	for pin in range(0, 3):
+	for pin in range(0, len(_IN_PINS)):
 		GPIO.output(_IN_PINS[pin], _INPUT_DICT[relay-1][pin])
 
